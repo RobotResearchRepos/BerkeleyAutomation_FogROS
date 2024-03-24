@@ -14,6 +14,10 @@ RUN git clone --recurse-submodules \
       https://github.com/RobotResearchRepos/BerkeleyAutomation_FogROS \
       /catkin_ws/src/FogROS
 
+RUN git clone --recurse-submodules \
+      https://github.com/uts-magic-lab/rosduct \
+      /catkin_ws/src/rosduct
+
 RUN . /opt/ros/$ROS_DISTRO/setup.sh \
  && apt-get update \
  && rosdep install -r -y \
